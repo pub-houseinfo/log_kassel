@@ -245,9 +245,32 @@
 
         .header-button-element {
             /* ボタンだけはクリックできるように設定 */
-            pointer-events: auto; 
+            pointer-events: auto;
             z-index: 30;
             margin-top: 1rem;
+        }
+
+        /* ヒーローキャッチの強調 */
+        .hero-h1 {
+            text-shadow:
+                2px 3px 0 rgba(0,0,0,0.35),
+                0 6px 20px rgba(0,0,0,0.55);
+        }
+
+        .hero-keyword {
+            display: inline-block;
+            color: #fde68a;
+            background: linear-gradient(transparent 58%, rgba(249, 115, 22, 0.9) 58%);
+            padding: 0 0.18em;
+            margin: 0 0.05em;
+            transform: rotate(-2deg);
+            text-shadow:
+                2px 2px 0 rgba(0,0,0,0.4),
+                0 4px 12px rgba(0,0,0,0.5);
+        }
+
+        .hero-sub {
+            text-shadow: 0 2px 8px rgba(0,0,0,0.55);
         }
     </style>
 </head>
@@ -277,12 +300,12 @@
                     <span class="accordion-label">DINNER</span>
                 </a>
                 <a href="#access" class="accordion-item">
-                    <img src="images/4.jpg?v=2" alt="Gallery 4">
+                    <img src="images/4.jpg?v=3" alt="Gallery 4">
                     <div class="absolute inset-0 bg-black/10"></div>
                     <span class="accordion-label">LOCATION</span>
                 </a>
             </div>
-            <div class="absolute inset-0 bg-black/15 pointer-events-none"></div>
+            <div class="absolute inset-0 bg-black/30 pointer-events-none"></div>
         </div>
 
         <div class="header-content px-4">
@@ -290,18 +313,23 @@
                 <div class="inline-block bg-white/20 backdrop-blur-md px-4 py-1 rounded-full mb-6 border border-white/30">
                     <p class="text-sm font-bold tracking-widest uppercase">Special Collaboration Stay</p>
                 </div>
-                <h1 class="pop-title text-4xl md:text-7xl mb-8 leading-tight">
-                    泊まるのは、森。<br>
-                    食べるのは、名店。
+                <h1 class="pop-title hero-h1 text-4xl md:text-6xl mb-8 leading-tight">
+                    泊まるのは、<span class="hero-keyword">森</span>。<br>
+                    ととのうのは、<span class="hero-keyword">ドーム</span>。<br>
+                    食べるのは、<span class="hero-keyword">名店</span>。
                 </h1>
-                <p class="text-lg md:text-2xl mb-12 font-medium leading-relaxed">
-                    最高のログハウスと、憧れのディナー。<br class="hidden md:block">
-                    生野高原の“いいとこ取り”を詰め込んだ、<br class="hidden md:block">
+                <p class="hero-sub text-lg md:text-2xl mb-12 font-medium leading-relaxed">
+                    最高のログハウスと、貸切ドームサウナと、<br class="hidden md:block">
+                    憧れのディナー。<br class="hidden md:block">
+                    生野高原の"いいとこ取り"を詰め込んだ、<br class="hidden md:block">
                     遊び心あふれる大人プランできました！
                 </p>
             </div>
-            <div class="header-button-element">
+            <div class="header-button-element flex flex-col items-center gap-4">
                 <a href="https://reserve.489ban.net/client/sugomori-hyogo/0/plan/id/246191/stay?noSearch=1#plan-246191" target="_blank" class="btn-bounce">予約する！</a>
+                <div class="bg-yellow-300 text-orange-900 px-5 py-2 rounded-full font-black text-xs md:text-sm shadow-lg rotate-[-2deg] tracking-wide">
+                    ⏰ 2026年6月30日チェックインまでの期間限定！
+                </div>
             </div>
         </div>
     </header>
@@ -328,11 +356,17 @@
     <section id="experience" class="py-20 px-6">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
             <div class="md:w-1/2">
-                <div class="relative">
-                    <img src="images/5.jpg?v=2" alt="Log House Stay" class="w-full rounded-[2.5rem] shadow-2xl rotate-[-2deg] object-fit aspect-[4/3] bg-gray-100">
+                <div class="relative mb-10">
+                    <img src="images/5.jpg?v=3" alt="Log House Stay" class="w-full rounded-[2.5rem] shadow-2xl rotate-[-2deg] object-fit aspect-[4/3] bg-gray-100">
                     <div class="absolute -bottom-6 -right-6 bg-green-700 text-white p-6 rounded-3xl shadow-xl hidden md:block">
                         <p class="text-xl font-black">Private<br>Space!</p>
                     </div>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <img src="images/room-1.jpg" alt="リビング・ダイニング" class="w-full aspect-square object-cover rounded-2xl shadow-md">
+                    <img src="images/room-2.jpg" alt="寝室" class="w-full aspect-square object-cover rounded-2xl shadow-md">
+                    <img src="images/room-3.jpg" alt="和室" class="w-full aspect-square object-cover rounded-2xl shadow-md">
+                    <img src="images/room-4.jpg" alt="屋外ダイニング" class="w-full aspect-square object-cover rounded-2xl shadow-md">
                 </div>
             </div>
             <div class="md:w-1/2 space-y-6">
@@ -357,7 +391,7 @@
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row-reverse items-center gap-12">
             <div class="md:w-1/2">
                 <div class="relative">
-                    <img src="images/6.jpg?v=2" alt="Dome Sauna" class="w-full rounded-[2.5rem] shadow-2xl rotate-[2deg] object-fit aspect-[4/3] bg-gray-100">
+                    <img src="images/6.jpg?v=3" alt="Dome Sauna" class="w-full rounded-[2.5rem] shadow-2xl rotate-[2deg] object-fit aspect-[4/3] bg-gray-100">
                     <div class="absolute -top-6 -left-6 bg-orange-500 text-white p-6 rounded-3xl shadow-xl hidden md:block">
                         <p class="text-xl font-black">Relax<br>Time!</p>
                     </div>
@@ -458,17 +492,17 @@
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="card-pop p-8 italic text-gray-600 relative">
-                    <span class="text-6xl text-orange-200 absolute top-4 left-4 font-serif">“</span>
+                    <span class="text-6xl text-orange-200 absolute top-4 left-4 font-serif">"</span>
                     <p class="relative z-10 pt-4 mb-6 text-sm">「夫の誕生日に利用しました。ログハウスの静けさとカッセルの豪華なディナー、どちらも最高で忘れられない一日になりました。送迎があるのが本当に助かりました！」</p>
                     <p class="text-xs font-bold text-right text-gray-400">ー 30代 女性（ご夫婦で利用）</p>
                 </div>
                 <div class="card-pop p-8 italic text-gray-600 relative">
-                    <span class="text-6xl text-green-200 absolute top-4 left-4 font-serif">“</span>
+                    <span class="text-6xl text-green-200 absolute top-4 left-4 font-serif">"</span>
                     <p class="relative z-10 pt-4 mb-6 text-sm">「ドームサウナが最高に気持ちよかったです！サウナ後の高原の風は都会では絶対に味わえません。朝食バスケットを持ってテラスで食べる時間は至福でした。」</p>
                     <p class="text-xs font-bold text-right text-gray-400">ー 20代 男性（カップルで利用）</p>
                 </div>
                 <div class="card-pop p-8 italic text-gray-600 relative">
-                    <span class="text-6xl text-orange-200 absolute top-4 left-4 font-serif">“</span>
+                    <span class="text-6xl text-orange-200 absolute top-4 left-4 font-serif">"</span>
                     <p class="relative z-10 pt-4 mb-6 text-sm">「本格的なログハウスに一度泊まってみたかったのですが、食事にレストランでいただけるこのプランは完璧でした。お肉が本当に美味しくて感動しました！」</p>
                     <p class="text-xs font-bold text-right text-gray-400">ー 40代 女性（ご友人と利用）</p>
                 </div>
